@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUAWuMrXjDc3EpRE6VlkPv124SSQFf_1sF_wDs22E3_roIOTyw48h0jh6WP9gWY2YoVEs&usqp=CAU" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-bar-pc">
+            <div class="App-info">
+                <li class="App-logo"><img src="/Images/MathWizard.png" alt="" width="50px" height="50px"></li>
+                <li class="App-name">MathWizard</li>
+            </div>
+          
+            <div class="menu">
+                <li><a href="#" class="no-link">Home</a></li>
+                <li><a href="#" class="no-link nav-tabs" id="container-aboutus">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Calculator
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item nav-tabs" href="#" id="container-standard-calc"><i class="bi bi-calculator"></i> Standard</a></li>
+                      <li><a class="dropdown-item nav-tabs" href="#" id="container-scientific-calc"><i class="bi bi-hourglass-top"></i> Scientific</a></li>
+                      <li><a class="dropdown-item nav-tabs" href="#" id="container-programmer-calc"><i class="bi bi-code-slash"></i> Programmer</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Converter
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item nav-tabs" href="#" id="container-weight-conv"><i class="bi bi-lock-fill"></i> Weight Converter</a></li>
+                      <li><a class="dropdown-item nav-tabs" href="#" id="container-volume-conv"><i class="bi bi-hexagon-half"></i> Volume Converter</a></li>
+                      <li><a class="dropdown-item nav-tabs" href="#" id="container-currency-conv"><i class="bi bi-currency-exchange"></i> Currency Converter</a></li>
+                    </ul>
+                  </li>
+            </div>
+        </div>
+    </nav>
+ 
+    <nav class="navbar navbar-dark navbar-expand-lg nav-mobile">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/Images/MathWizard.png" alt="" width="50px" height="50px"></a>
+          <a class="navbar-brand" href="#">MathWizard</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link nav-tabs" id="container-aboutus" aria-current="page" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Calculator
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item nav-tabs" href="#"  id="container-standard-calc"><i class="bi bi-calculator"></i> Standard</a></li>
+                  <li><a class="dropdown-item nav-tabs" href="#"  id="container-scientific-calc"><i class="bi bi-hourglass-top"></i> Scientific</a></li>
+                  <li><a class="dropdown-item nav-tabs" href="#"  id="container-programmer-calc"><i class="bi bi-code-slash"></i> Programmer</a></li>
+                </ul>
+              </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Converter
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item nav-tabs" href="#" id="container-weight-conv"><i class="bi bi-lock-fill"></i> Weight Converter</a></li>
+                  <li><a class="dropdown-item nav-tabs" href="#" id="container-volume-conv"><i class="bi bi-hexagon-half"></i> Volume Converter</a></li>
+                  <li><a class="dropdown-item nav-tabs" href="#" id="container-currency-conv"><i class="bi bi-currency-exchange"></i> Currency Converter</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<div id="container-standard-calc-pc">
+<div class="standard-calc-left">
+<div class="cal-screen">
+    <div class="standard-t1">
+        <input type="text" class="standard-top-ip" disabled>
+    </div>
+    <div class="standard-t2">
+        <input type="text" class="standard-bottom-ip" >
+    </div>
+</div>
+<div class="cal-body">
+    <table class="Standard-table">
+        <tr>
+          <td><button class="Standard-buttons-p nums Standard-operator-buttons" id="%">%</button></td>
+          <td><button class="Standard-buttons-p brackets Standard-operator-buttons">()</button></td>
+          <td><button class="Standard-buttons-p clear Standard-control-buttons">CE</button></td>
+          <td><button class="Standard-buttons-p back Standard-control-buttons"><i class="bi bi-backspace-fill"></i></button></td>
+        </tr>
+        <tr>
+          <td><button class="Standard-buttons-p inv Standard-operator-buttons">1/𝑥</button></td>
+          <td><button class="Standard-buttons-p sq Standard-operator-buttons">𝑥²</button></td>
+          <td><button class="Standard-buttons-p sqrt Standard-operator-buttons">√𝑥 </button></td>
+          <td><button class="Standard-buttons-p nums Standard-operator-buttons" id="÷">÷</button></td>
+        </tr>
+        <tr>
+          <td><button class="Standard-buttons nums" id="7">7</button></td>
+          <td><button class="Standard-buttons nums" id="8">8</button></td>
+          <td><button class="Standard-buttons nums" id="9">9</button></td>
+          <td><button class="Standard-buttons-p nums Standard-operator-buttons" id="x">x</button></td>
+        </tr>
+        <tr>
+          <td><button class="Standard-buttons nums" id="4">4</button></td>
+          <td><button class="Standard-buttons nums" id="5">5</button></td>
+          <td><button class="Standard-buttons nums" id="6">6</button></td>
+          <td><button class="Standard-buttons-p nums Standard-operator-buttons" id="-">-</button></td>
+        </tr>
+        <tr>
+          <td><button class="Standard-buttons nums" id="1">1</button></td>
+          <td><button class="Standard-buttons nums" id="2">2</button></td>
+          <td><button class="Standard-buttons nums" id="3">3</button></td>
+          <td><button class="Standard-buttons-p nums Standard-operator-buttons" id="+">+</button></td>
+        </tr>
+        <tr>
+          <td><button class="Standard-buttons-p ans Standard-operator-buttons">Ans</button></td>
+          <td><button class="Standard-buttons-p nums Standard-operator-buttons" id="0">0</button></td>
+          <td><button class="Standard-buttons-p nums Standard-operator-buttons" id=".">.</button></td>
+          <td><button class="Standard-buttons-p evaluate Standard-control-buttons" >=</button></td>
+        </tr>
+        
+      </table>
+</div>
+</div>
+<div class="standard-calc-right">
+<div class="standard-mem-title">
+    Memory
+</div>
+<div class="standard-mem-list">
+</div>
+<div class="standard-mem-clear-all">
+ Clear Memory
+</div>
+</div>
+
+
+</div>
+   <div id="container-scientific-calc-pc">
+    <div class="Scientific-calc-left">
+      <div class="cal-screen">
+          <div class="Scientific-t1">
+              <input type="text" class="Scientific-top-ip" disabled>
+          </div>
+          <div class="Scientific-t2">
+              <input type="text" class="Scientific-bottom-ip" >
+          </div>
+      </div>
+      <div class="cal-body">
+        <div class="Scientific-params-list">
+          <button class="Scientific-buttons-p params Scientific-params-buttons" id="deg">°</button>
+          <button class="Scientific-buttons-p params Scientific-params-buttons" id="rad">ʳᵃᵈ</button>
+          
+        </div>
+
+          <table class="Scientific-table">
+              <tr>
+                <td><button class="Scientific-buttons-p  Scientific-operator-buttons sin-fn" id="Sin">Sin</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="𝝅">𝝅</button></td>
+                <td><button class="Scientific-buttons-p Scientific-operator-buttons exp-fn" id="exp(">exp</button></td>
+                <td><button class="Scientific-buttons-p s-clear Scientific-control-buttons">CE</button></td>
+                <td><button class="Scientific-buttons-p s-back Scientific-control-buttons"><i class="bi bi-backspace-fill"></i></button></td>
+              </tr>
+              <tr>
+                <td><button class="Scientific-buttons-p  Scientific-operator-buttons cos-fn" id="Cos">Cos</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="^">𝑥ʸ</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="10^">10ˣ </button></td>
+                <td><button class="Scientific-buttons-p Scientific-operator-buttons log-fn" id="log">log</button></td>
+                <td><button class="Scientific-buttons-p Scientific-operator-buttons ln-fn" id="ln">ln</button></td>
+              </tr>
+              <tr>
+                <td><button class="Scientific-buttons-p  Scientific-operator-buttons tan-fn" id="tan">tan</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="(">(</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id=")">) </button></td>
+                <td><button class="Scientific-buttons-p Scientific-operator-buttons fact-fn" id="!">n!</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="+">+</button></td>
+              </tr>
+              <tr>
+                <td><button class="Scientific-buttons-p  Scientific-operator-buttons inv-sin-fn" id="Sin⁻¹">Sin⁻¹</button></td>
+                <td><button class="Scientific-buttons s-nums" id="7">7</button></td>
+                <td><button class="Scientific-buttons s-nums" id="8">8</button></td>
+                <td><button class="Scientific-buttons s-nums" id="9">9</button></td>
+                <td><button class="Standard-buttons-p s-nums Scientific-operator-buttons" id="÷">÷</button></td>
+              </tr>
+              <tr>
+                <td><button class="Scientific-buttons-p Scientific-operator-buttons inv-cos-fn" id="Cos⁻¹">Cos⁻¹</button></td>
+                <td><button class="Scientific-buttons s-nums" id="4">4</button></td>
+                <td><button class="Scientific-buttons s-nums" id="5">5</button></td>
+                <td><button class="Scientific-buttons s-nums" id="6">6</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="x">x</button></td>
+              </tr>
+              <tr>
+                <td><button class="Scientific-buttons-p Scientific-operator-buttons inv-tan-fn" id="tan⁻¹">tan⁻¹</button></td>
+                <td><button class="Scientific-buttons s-nums" id="1">1</button></td>
+                <td><button class="Scientific-buttons s-nums" id="2">2</button></td>
+                <td><button class="Scientific-buttons s-nums" id="3">3</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="-">-</button></td>
+              </tr>
+              <tr>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="%">%</button></td>
+                <td><button class="Scientific-buttons-p s-ans Scientific-operator-buttons">Ans</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id="0">0</button></td>
+                <td><button class="Scientific-buttons-p s-nums Scientific-operator-buttons" id=".">.</button></td>
+                <td><button class="Scientific-buttons-p s-evaluate Scientific-control-buttons" >=</button></td>
+              </tr>
+              
+            </table>
+      </div>
+      </div>
+      <div class="Scientific-calc-right">
+      <div class="Scientific-mem-title">
+          Memory
+      </div>
+      <div class="Scientific-mem-list">
+
+      </div>
+      <div class="Scientific-mem-clear-all">
+       Clear Memory
+      </div>
+      </div>
+   </div>   
+   <div id="container-programmer-calc-pc">
+    <div class="prog_buttons_box">
+      <button class="program-buttons" id="bin">BIN</button>
+      <button class="program-buttons" id="oct">OCT</button>
+      <button class="program-buttons" id="hex">HEX</button>
+      <button class="program-buttons" id="dec">DEC</button>
+    </div>
+    <div class="prog_input_box">
+      <li class="program-input"><div class="prog-ip-title">BIN</div><input type="text" class="program-inputs" id="bin-ip"></li>
+      <li class="program-input"><div class="prog-ip-title">OCT</div><input type="text" class="program-inputs" id="oct-ip"></li>
+      <li class="program-input"><div class="prog-ip-title">HEX</div><input type="text" class="program-inputs" id="hex-ip"></li>
+      <li class="program-input"><div class="prog-ip-title">DEC</div><input type="text" class="program-inputs" id="dec-ip"></li>
+    </div>
+    <div class="prog-eval-button">
+      <button class="program-control-buttons">Convert</button>
+      <button class="program-control-buttons prog-clear">Clear</button>
+    </div>
+   </div>
+   <div id="loading">
+  <img src="https://media2.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif?cid=ecf05e47c5rtx9y148svtb1ozi41jlkma6n9605tgyxz833w&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" width="100vh" height="100vh">
+</div>
+
+  <div id="container-weight-conv-pc">
+    
+    <h2 style="text-align: center; color: #00eeff; ">Weight Converter </h2><br/>
+    <div class="weight-conv-ip">
+      <select class="form-select Weight-select-ip" aria-label="Default select example" >
+        <option value="carats">Carats </option>
+        <option  value="grams" selected>Grams</option>
+        <option value="kilograms">Kilograms</option>
+        <option value="pounds">Pounds</option>
+        <option value="Stone">Stone</option>
+      </select>
+      <input type="number" class="Weight-value-ip">
+    </div>
+    <div class="weight-conv-op">
+
+      <select class="form-select Weight-select-op" aria-label="Default select example">
+        <option value="carats">Carats</option>
+        <option value="grams">Grams</option>
+        <option value="kilograms" selected>Kilograms</option>
+        <option value="pounds">Pounds</option>
+        <option value="Stone">Stone</option>
+      </select>
+      <input type="number" class="Weight-value-op" disabled>
+
+    </div>
+
+    <div class="weight-eval-button">
+      <!-- <button class="weight-control-buttons weight-eval">Convert</button> -->
+      <button class="weight-control-buttons weight-clear">Clear</button>
+    </div>
+  </div>
+
+
+
+  <div id="container-currency-conv-pc">
+
+
+    <h2 style="text-align: center; color: #00eeff; ">Currency Converter </h2><br/>
+    <div class="currency-conv-ip">
+      <select class="form-select currency-select-ip" aria-label="Default select example" >
+        <option value="peso">Argentina - Peso </option>
+        <option  value="a-dollar" selected>Australia - Dollar</option>
+        <option value="taka">Bangladesh - taka</option>
+        <option value="c-dollar">Canada-dollar</option>
+        <option value="euro">Europe - Euro</option>
+        <option value="rupee">India - Rupee</option>
+        <option value="rand">South Africa - Rand</option>
+      </select>
+      <input type="number" class="currency-value-ip">
+    </div>
+    <div class="currency-conv-op">
+
+      <select class="form-select currency-select-op" aria-label="Default select example">
+        <option value="peso">Argentina - Peso </option>
+        <option  value="a-dollar" selected>Australia - Dollar</option>
+        <option value="taka">Bangladesh - taka</option>
+        <option value="c-dollar">Canada-dollar</option>
+        <option value="euro">Europe - Euro</option>
+        <option value="rupee">India - Rupee</option>
+        <option value="rand">South Africa - Rand</option>
+      </select>
+      <input type="number" class="currency-value-op" disabled>
+
+    </div>
+
+    <div class="currency-eval-button">
+      <!-- <button class="weight-control-buttons weight-eval">Convert</button> -->
+      <button class="currency-control-buttons currency-clear">Clear</button>
+    </div>
+  </div>
+
+  <div id="container-volume-conv-pc">
+
+
+    <h2 style="text-align: center; color: #00eeff; ">Volume Converter </h2><br/>
+    <div class="volume-conv-ip">
+      <select class="form-select volume-select-ip" aria-label="Default select example" >
+        <option value="mls"> Mililiters </option>
+        <option  value="lts" selected>Liters</option>
+        <option value="c_cm">Cubic Centimeters</option>
+        <option value="c_mt">Cubic Meters</option>
+        <option value="c_inch">Cubic Inches</option>
+        <option value="c_ft">Cubic Feet</option>
+        <option value="c_yd">Cubic Yards</option>
+        <option value="t_sp">Teaspoons</option>
+        <option value="table_sp">Tablespoons</option>
+        <option value="gll">Gallons</option>
+      </select>
+      <input type="number" class="volume-value-ip">
+    </div>
+    <div class="volume-conv-op">
+
+      <select class="form-select volume-select-op" aria-label="Default select example">
+        <option value="mls"> Mililiters </option>
+        <option  value="lts" selected>Liters</option>
+        <option value="c_cm">Cubic Centimeters</option>
+        <option value="c_mt">Cubic Meters</option>
+        <option value="c_inch">Cubic Inches</option>
+        <option value="c_ft">Cubic Feet</option>
+        <option value="c_yd">Cubic Yards</option>
+        <option value="t_sp">Teaspoons</option>
+        <option value="table_sp">Tablespoons</option>
+        <option value="gll">Gallons</option>
+      </select>
+      <input type="number" class="volume-value-op" disabled>
+
+    </div>
+
+    <div class="volume-eval-button">
+      <!-- <button class="weight-control-buttons weight-eval">Convert</button> -->
+      <button class="volume-control-buttons volume-clear">Clear</button>
+    </div>
+  </div>
+
+  <div id="container-aboutus-pc">
+    <div class="about-top">
+      ABOUT MATHWIZARD
+      <div>
+        <img src="/Images/pp.jpg" alt="" width="60px" height="60px" class="profile-photo" >
+
+      </div>
+    </div>
+    <div class="about-main">
+      <div class="about-box">
+        <div class="who-i-am">
+          <h3>Who I Am:</h3>
+          <p>
+            I am Biraj Paul the creator of MathWizard, a calculator website designed to handle a wide range of calculations and conversions. As an individual developer with a passion for mathematics, I have dedicated my time and expertise to building a versatile platform that meets the needs of users seeking both standard and scientific calculations, as well as weight, volume, and currency conversions.</p>
+        </div>
+        <div class="difference-from-others">
+          <h3>How MathWizard Is Different from Others:</h3>
+          <li>Comprehensive Functionality: MathWizard sets itself apart by offering a comprehensive range of calculations and conversions. From simple arithmetic operations to complex scientific functions, my website covers it all. Additionally, the ability to convert weights, volumes, and currencies adds an extra layer of usefulness and convenience for users.</li>
+          <li>User-Focused Design: I understand that not everyone has a strong mathematical background. That's why I have designed MathWizard with a user-friendly interface in mind. The website is intuitive and easy to navigate, ensuring that anyone, regardless of their mathematical proficiency, can utilize the calculators and conversion tools without any hassle.</li>
+          <li>Accuracy and Reliability: As the sole developer of MathWizard, I take great care to ensure that the calculations and conversions provided by the website are accurate and reliable. I regularly update the website to reflect changes in scientific standards and currency exchange rates, guaranteeing that users can rely on MathWizard for precise results.
+          </li>
+          <li>Constant Improvements: As a dedicated developer, I am committed to continually improving MathWizard. I actively seek user feedback and suggestions to enhance the website's functionality and user experience. By staying responsive to user needs, I strive to create a tool that evolves with the requirements of its users.</li>
+        </div>
+      </div>
+    </div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top " >
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-0 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-white" >© 2023 MathWizard</span>
+      </div>
+  
+      <ul class="nav col-md-4 list-unstyled d-flex footer-icons">
+          <li><a href="https://www.facebook.com/biraj.paul.509" class="no-link-icons" target="_blank"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hearty.struggler/" class="no-link-icons" target="_blank"><i class="bi bi-instagram"></i></a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/biraj-paul-961478222/" class="no-link-icons" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+          <li>
+            <a href="https://twitter.com/biraj0001" class="no-link-icons" target="_blank"><i class="bi bi-twitter"></i></a></li>
+          <li>
+            <a href="https://github.com/Biraj0001" class="no-link-icons" target="_blank"><i class="bi bi-github"></i></a></li>
+  
+      </ul>
+    </footer>
+  </div>
+
+
+</body>
+
+
+
+<link rel="stylesheet" href="calculator.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js"integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="crossorigin="anonymous"></script>
+<script>
+
+let tabs = ["container-standard-calc-pc", "container-scientific-calc-pc", "container-programmer-calc-pc","container-weight-conv-pc","container-volume-conv-pc","container-currency-conv-pc","container-aboutus-pc"];
+$("#loading").hide();
+for(let i=0;i<7;i++){
+    if(tabs[i]=="container-standard-calc-pc"){
+
+      $("#container-standard-calc").show();
+    }
+    else{
+      
+      $("#"+tabs[i]).hide();
+    }
+  }
+$(".nav-tabs").click(function(){
+  let tab_id = this.id;
+  for(let i=0;i<7;i++){
+    if(tabs[i]==tab_id+"-pc"){
+      $("#loading").show();
+      setTimeout(function(){
+        $("#"+tabs[i]).show();
+        $("#loading").hide();
+        
+      },500)
+      
+    }
+    else{
+      
+      $("#"+tabs[i]).hide();
+    }
+  }
+})
+
+let Id=0;
+  function date(){
+    var d = new Date(); 
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let  current_time = h+" : "+m;
+    return current_time;
+  }
+    let ev=0,ans=0;
+    str = $(".standard-bottom-ip").val();
+    
+    $(".nums").click(function(){
+        if(ev==0 || !(this.id>='0' && this.id<='9' )){
+            ev=0;
+            str_top=$("standard-top-ip").val()
+            if(str_top=="Ooops!"){
+                str="";
+                $(".standard-bottom-ip").val(str);
+                $(".standard-top-ip").val("")
+            }
+            
+            str+=this.id;
+            $(".standard-bottom-ip").val(str);
+
+        }
+        else{
+            str="";
+            $(".standard-bottom-ip").val(str);
+            str+=this.id;
+            $(".standard-bottom-ip").val(str);
+            ev=0;
+
+        }
+        
+    })
+    $(".evaluate").click(function(){
+      let time_now = date();
+      // str = $(".bottom-ip").val();
+        if(str!=""){
+          q=str;
+            $(".standard-top-ip").val(str+"=");
+        str = str.replace(/x/g, "*");
+        str = str.replace(/÷/g, "/");
+        str = str.replace(/%/g, "*0.01*");
+        console.log(str);
+
+        try {
+            ans = eval(str);
+            str=ans.toString();
+        $(".standard-bottom-ip").val(ans)
+        ev++;
+
+        let memv=$(".standard-mem-list").html();
+          memv +=   `<li id="list${Id}">
+      <div class="standard-mem-question">${q}=</div>
+      <div class="standard-mem-answer">
+        <div class="standard-mem-value">${ans}</div>
+        <div class="standard-mem-time">${time_now}</div>
+        <div class="delete" id="delete${Id}" onclick="delete_li(this)">Delete</div>
+      </div>
+    </li>`;
+    Id++;
+      $(".standard-mem-list").html(memv);
+
+        } 
+     
+        catch (e) {
+        if (e instanceof SyntaxError) {
+            $(".standard-top-ip").val("Ooops!")   
+        $(".standard-bottom-ip").val(e.message)
+       }
+      }
+        }
+    })
+    $(".clear").click(function(){
+        str="";
+        $(".standard-bottom-ip").val(str);
+        $(".standard-top-ip").val(str);
+    })
+    $(".back").click(function(){
+      console.log(str);
+        str = str.slice(0,str.length-1);
+        $(".standard-bottom-ip").val(str);
+    })
+    $(".ans").click(function(){
+        $(".standard-bottom-ip").val(str+=ans);
+    })
+    $(".sq").click(function(){
+      q=str;
+      let time_now = date();
+
+      str = str.replace(/x/g, "*");
+        str = str.replace(/÷/g, "/");
+        str = str.replace(/%/g, "*0.01*");
+        str = eval(str);
+        console.log(str);
+        ans=eval(str*str);
+        $(".standard-top-ip").val(str+"²=");
+        str=ans.toString();
+        $(".standard-bottom-ip").val(str);
+        ev++;
+
+        let memv=$(".standard-mem-list").html();
+          memv +=   `<li id="list${Id}">
+      <div class="standard-mem-question">${q}²=</div>
+      <div class="standard-mem-answer">
+        <div class="standard-mem-value">${ans}</div>
+        <div class="standard-mem-time">${time_now}</div>
+        <div class="delete" id="delete${Id}" onclick="delete_li(this)">Delete</div>
+      </div>
+    </li>`;
+    Id++;
+
+      $(".standard-mem-list").html(memv);
+
+    })
+    $(".sqrt").click(function(){
+      q=str;
+      time_now=date();
+
+
+      str = str.replace(/x/g, "*");
+        str = str.replace(/÷/g, "/");
+        str = str.replace(/%/g, "*0.01*");
+        str = eval(str);
+        if(str>0){
+          console.log(str);
+        ans=eval(Math.sqrt(str));
+        $(".standard-top-ip").val("√"+str+"=");
+        str=ans.toString();
+        $(".standard-bottom-ip").val(str);
+        ev++;
+        let memv=$(".standard-mem-list").html();
+          memv +=   `<li id="list${Id}">
+      <div class="standard-mem-question">√${q}=</div>
+      <div class="standard-mem-answer">
+        <div class="standard-mem-value">${ans}</div>
+        <div class="standard-mem-time">${time_now}</div>
+        <div class="delete" id="delete${Id}" onclick="delete_li(this)">Delete</div>
+      </div>
+    </li>`;
+    Id++;
+      $(".standard-mem-list").html(memv);
+        }
+        else{
+          $(".standard-top-ip").val("√"+str+"=");
+          str=str*-1;
+          console.log(str);
+        ans=eval(Math.sqrt(str));
+        // $(".top-ip").val("√"+str+"=");
+        str=ans.toString()+" i";
+        $(".standard-bottom-ip").val(str);
+        ev++;
+        let memv=$(".standard-mem-list").html();
+          memv +=   `<li id="list${Id}">
+      <div class="mem-question">√${q}=</div>
+      <div class="mem-answer">
+        <div class="mem-value">${ans}i</div>
+        <div class="mem-time">${time_now}</div>
+        <div class="delete" id="delete${Id}" onclick="delete_li(this)">Delete</div>
+      </div>
+    </li>`;
+    Id++
+
+      $(".mem-list").html(memv);
+        }
+        
+    })
+    $(".inv").click(function(){
+      q=str;
+      time_now=date();
+
+      str = str.replace(/x/g, "*");
+        str = str.replace(/÷/g, "/");
+        str = str.replace(/%/g, "*0.01*");
+        str = eval(str);
+        // console.log(str);
+        ans=eval(1/str);
+        $(".standard-top-ip").val("1/"+str+"=");
+        str=ans.toString();
+        $(".standard-bottom-ip").val(str);
+        ev++;
+        let memv=$(".standard-mem-list").html();
+          memv +=   `<liid="list${Id}">
+      <div class="standard-mem-question">1/${q}=</div>
+      <div class="standard-mem-answer">
+        <div class="standard-mem-value">${ans}</div>
+        <div class="standard-mem-time">${time_now}</div>
+        <div class="delete" id="delete${Id}" onclick="delete_li(this)">Delete</div>
+      </div>
+    </liid=>`;
+
+      $(".standard-mem-list").html(memv);
+    })
+
+    let br=0;
+    $(".brackets").click(function(){
+      
+     if(str!=""){
+      if(br==0 || (str[str.length-1]=='+' || str[str.length-1]=='-' || str[str.length-1]=='x' || str[str.length-1]=='÷')){
+        str+="(";
+        br+=1;
+      }
+      else if(br!=0||(str[str.length-1]>='0' && str[str.length-1]=='9') || str[str.length-1]==')') {
+        str+=")";
+        br-=1;
+      }
+     }
+     else{
+      str+="(";
+      br++;
+     }
+      $(".standard-bottom-ip").val(str);
+
+    })
+   
+    function delete_li(e){
+      let del = e.id;
+      let l_id = "list"+extract_num(del);
+      $("#"+l_id).hide();
+    }
+
+ $(".standard-mem-clear-all").click(function(){
+  $(".standard-mem-list li").hide();
+ })
+
+
+
+//  scientific_calc functions :
+
+ function lastcoeff(s){
+  let p = "";
+  for(let i=s.length-1;i>=0;i--){
+    if(s[i]=='+'||s[i]=='-'||s[i]=='x'||s[i]=='÷'){
+      return p;
+    }
+    else{
+      p+=s[i]
+    }
+  }
+  return p;
+}
+
+function rev(s){
+  let new_s="";
+  for(let i=s.length-1;i>=0;i--){
+    new_s +=s[i];
+  }
+  return new_s;
+}
+
+function cancel_last(s){
+  let operator = 0;
+  let p="";
+  for(let i=s.length-1;i>=0;i--){
+
+    if(operator!=0){
+      p+=s[i];
+    }
+    else{
+      if(s[i]=='+'||s[i]=='-'||s[i]=='x'||s[i]=='÷'){
+        p+=s[i];
+     operator++;
+    }
+    }
+
+    
+  }
+  return rev(p);
+}
+
+state_params = "deg";
+$("#"+state_params).addClass("params-active");
+let params_array = ["deg","rad"];
+
+$(".params").click(function(){
+  // console.log(this.id);
+  $("#"+this.id).addClass("params-active");
+  state_params = this.id;
+  for(let i=0;i<3;i++){
+  if(params_array[i]!=this.id){
+    if($("#"+params_array[i]).hasClass("params-active")){
+      $("#"+params_array[i]).removeClass("params-active");
+    }
+  }
+  
+  }
+})
+
+function factorial(n){
+  if(n==0){
+    return 1;
+  }
+  else{
+    return n*factorial(n-1);
+  }
+}
+
+sc_str = $(".Scientific-bottom-ip").val();
+$(".s-nums").click(function(){
+  sc_str = $(".Scientific-bottom-ip").val();
+  sc_str+=this.id;
+  $(".Scientific-bottom-ip").val(sc_str);
+})
+
+$(".sin-fn").click(function(){
+  sc_str = $(".Scientific-bottom-ip").val();
+  sc_str = sc_str.replaceAll("𝝅", "3.141592653589793");
+  sc_str = sc_str.replace(/%/g, "*0.01*");
+  if(state_params=="deg"){
+  let deg = rev(lastcoeff(sc_str));
+  
+  let radians = deg * Math.PI/180;
+  let value = Math.sin(radians).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Sin("+deg+"°)");
+  }
+  else if(state_params = "rad"){
+    let radians = rev(lastcoeff(sc_str));
+  let value = Math.sin(radians).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Sin("+radians+"rad)");
+  }
+})
+$(".exp-fn").click(function(){
+  let coeff = rev(lastcoeff(sc_str));
+  let value = Math.exp(coeff);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"exp("+coeff+")");
+})
+$(".log-fn").click(function(){
+  let coeff = rev(lastcoeff(sc_str));
+  let value = Math.log10(coeff);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"log10("+coeff+")");
+})
+$(".ln-fn").click(function(){
+  let coeff = rev(lastcoeff(sc_str));
+  let value = Math.log(coeff);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"log("+coeff+"°)");
+})
+$(".fact-fn").click(function(){
+  let f =rev(lastcoeff(sc_str));
+  var fact = factorial(f);
+  sc_str = cancel_last(sc_str)+fact;
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+f+"!");
+})
+
+
+
+$(".cos-fn").click(function(){
+  sc_str = $(".Scientific-bottom-ip").val();
+    sc_str = sc_str.replaceAll("𝝅", "3.141592653589793");
+    sc_str = sc_str.replace(/%/g, "*0.01*");
+  if(state_params=="deg"){
+    // console.log(sc_str);
+  let deg = rev(lastcoeff(sc_str));
+  let radians = deg * Math.PI/180;
+  let value = Math.cos(radians).toFixed(2);
+  value.toString();
+  sc_str = cancel_last(sc_str)+value;
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Cos("+deg+"°)");
+  }
+  else if(state_params = "rad"){
+    let radians = rev(lastcoeff(sc_str));
+  let value = Math.cos(radians).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Cos("+radians+"rad)");
+  }
+})
+$(".tan-fn").click(function(){
+  sc_str = $(".Scientific-bottom-ip").val();
+    sc_str = sc_str.replaceAll("𝝅", "3.141592653589793");
+    sc_str = sc_str.replace(/%/g, "*0.01*");
+  if(state_params=="deg"){
+  let deg = rev(lastcoeff(sc_str));
+  let radians = deg * Math.PI/180;
+  let value = Math.tan(radians).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"tan("+deg+"°)");
+  }
+  else if(state_params = "rad"){
+    let radians = rev(lastcoeff(sc_str));
+  let value = Math.tan(radians).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"tan("+radians+"°)");
+  }
+})
+$(".inv-sin-fn").click(function(){
+  if(state_params=="deg"){
+  let deg = rev(lastcoeff(sc_str));
+  let value =  (Math.asin(deg)*180/Math.PI).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Sin⁻¹("+deg+")");
+  }
+  else if(state_params = "rad"){
+    let radians = rev(lastcoeff(sc_str));
+    let value =  Math.asin(radians).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Sin⁻¹("+radians+")");
+  }
+})
+$(".inv-cos-fn").click(function(){
+  if(state_params=="deg"){
+  let deg = rev(lastcoeff(sc_str));
+  let value =  (Math.acos(deg)*180/Math.PI).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Cos⁻¹("+deg+")");
+  }
+  else if(state_params = "rad"){
+    let radians = rev(lastcoeff(sc_str));
+    let value =  Math.acos(radians).toFixed(2);
+  value.toString();
+  console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"Cos⁻¹("+deg+")");
+  }
+})
+$(".inv-tan-fn").click(function(){
+  if(state_params=="deg"){
+  let deg = rev(lastcoeff(sc_str));
+  let value =  (Math.atan(deg)*180/Math.PI).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"tan⁻¹("+deg+")");
+  }
+  else if(state_params = "rad"){
+    let radians = rev(lastcoeff(sc_str));
+    let value =  Math.atan(radians).toFixed(2);
+  value.toString();
+  // console.log(value);
+  sc_str = cancel_last(sc_str)+value;
+  // console.log(sc_str);
+  $(".Scientific-bottom-ip").val(sc_str);
+  $(".Scientific-top-ip").val(cancel_last(sc_str)+"tan⁻¹("+deg+")");
+  }
+})
+
+
+$(".s-evaluate").click(function(){
+
+        try {
+
+
+        let q = $(".Scientific-top-ip").val();
+        // console.log(1);
+        sc_str = sc_str.replaceAll("^", "**");
+        sc_str = sc_str.replaceAll("𝝅", "Math.PI");
+        sc_str = sc_str.replaceAll("x", "*");
+        sc_str = sc_str.replaceAll("÷", "/");
+        sc_str = sc_str.replace(/%/g, "*0.01*");
+        // console.log(sc_str);
+        // console.log(sc_str);
+        sc_ans = eval(sc_str);
+        $(".Scientific-bottom-ip").val(sc_ans);
+
+        time_now = date();
+
+
+
+        let sc_memv=$(".Scientific-mem-list").html();
+        // console.log("mem"+sc_memv);
+                sc_memv +=   `<li id = "sc_list${Id}" >
+            <div class="Scientific-mem-question">${q}</div>
+            <div class="Scientific-mem-answer">
+              <div class="Scientific-mem-value">${sc_ans}</div>
+              <div class="Scientific-mem-time">${time_now}</div>
+              <div class="delete" id="sc_delete${Id}" onclick="sc_delete_li(this)">Delete</div>
+            </div>
+          </li>`;
+
+            $(".Scientific-mem-list").html(sc_memv);
+
+        } 
+     
+        catch (e) {
+        if (e instanceof SyntaxError) {
+            $(".Scientific-top-ip").val("Ooops!")   
+        $(".Scientific-bottom-ip").val(e.message)
+       }
+      }
+})
+
+
+$(".s-clear").click(function(){
+        sc_str="";
+        $(".Scientific-bottom-ip").val(sc_str);
+        $(".Scientific-top-ip").val(sc_str);
+    })
+    $(".s-back").click(function(){
+      // console.log(sc_str);
+      sc_str = sc_str.slice(0,sc_str.length-1);
+        $(".Scientific-bottom-ip").val(sc_str);
+    })
+
+    function extract_num(s){
+      let p ="";
+      for(let i=0;i<s.length;i++){
+
+        if(s[i]>='0' && s[i]<='9'){
+          p+=s[i];
+        }
+      }
+      return p;
+    }
+
+    function sc_delete_li(e){
+      let del = e.id;
+      let l_id = "sc_list"+ extract_num(del);
+      $("#"+l_id).remove();
+    }
+
+    $(".Scientific-mem-clear-all").click(function(){
+  $(".Scientific-mem-list li").remove();
+ })
+
+
+
+ let prog_array =["bin","oct","hex","dec"];
+ for(let i=0;i<prog_array.length;i++){
+      $("#"+prog_array[i]+"-ip").prop('disabled', true);
+      $("#"+prog_array[i]+"-ip").addClass("program-inputs-diabled");
+
+    }
+ $(".program-buttons").click(function(){
+  p_id = this.id;
+  $("#"+this.id).addClass("params-active");
+  $("#"+p_id+"-ip").prop('disabled', false);
+  if($("#"+p_id+"-ip").hasClass("program-inputs-diabled")){
+    $("#"+p_id+"-ip").removeClass("program-inputs-diabled");
+  }
+  // $("#"+p_id+"-ip");
+  for(let i=0;i<prog_array.length;i++){
+    if(prog_array[i]!=p_id){
+      $("#"+prog_array[i]+"-ip").prop('disabled', true);
+      $("#"+prog_array[i]+"-ip").addClass("program-inputs-diabled");
+      if($("#"+prog_array[i]).hasClass("params-active")){
+        $("#"+prog_array[i]).removeClass("params-active");
+      }
+
+    }
+  }
+ })
+function decimal_to_binary(s){
+  let x = parseInt(s);
+  return x.toString(2).toUpperCase();
+}
+function decimal_to_octal(s){
+  let x = parseInt(s);
+  return x.toString(8).toUpperCase();
+}
+function decimal_to_hex(s){
+  let x = parseInt(s);
+  return x.toString(16).toUpperCase();
+}
+function binary_to_dec(s){
+  return parseInt(s, 2).toString(10);
+}
+function oct_to_dec(s){
+  return parseInt(s, 8).toString(10);
+}
+function hex_to_dec(s){
+  return parseInt(s, 16).toString(10);
+}
+ $(".program-control-buttons").click(function(){
+  for(let i=0;i<prog_array.length;i++){
+    if(!$("#"+prog_array[i]+"-ip").hasClass("program-inputs-diabled")){
+      let data = $("#"+prog_array[i]+"-ip").val();
+      if(prog_array[i]=="dec"){
+
+        $("#bin-ip").val(decimal_to_binary(data));
+        $("#oct-ip").val(decimal_to_octal(data));
+        $("#hex-ip").val(decimal_to_hex(data));
+
+      }
+      else if(prog_array[i]=="hex"){
+        let d = hex_to_dec(data);
+        $("#dec-ip").val(d);
+        $("#oct-ip").val(decimal_to_octal(d));
+        $("#bin-ip").val(decimal_to_binary(d));
+
+      }
+      else if(prog_array[i]=="bin"){
+        let d = binary_to_dec(data);
+        $("#dec-ip").val(d);
+        $("#oct-ip").val(decimal_to_octal(d));
+        $("#hex-ip").val(decimal_to_hex(d));
+      }
+      else if(prog_array[i]=="oct"){
+        let d = oct_to_dec(data);
+        $("#dec-ip").val(d);
+        $("#bin-ip").val(decimal_to_binary(d));
+        $("#hex-ip").val(decimal_to_hex(d));
+      }
+    }
+  }
+ })
+
+$(".prog-clear").click(function(){
+        $("#dec-ip").val("");
+        $("#oct-ip").val("");
+        $("#hex-ip").val("");
+        $("#bin-ip").val("");
+})
+
+function carats2kg(c){
+  return c*0.0002;
+}
+function grams2kg(g){
+  return g*0.001;
+}
+function pounds2kg(p){
+  return p*0.453592;
+}
+function stones2kg(s){
+  return s*6.350293;
+}
+function kg2carats(k){
+  return k/0.0002;
+}
+function kg2grams(k){
+  return k/0.001;
+}
+function kg2pounds(k){
+  return k/0.453592;
+}
+function kg2stones(k){
+  return k/6.350293;
+}
+var weight_ip_params = $('.Weight-select-ip').find(":selected").val();
+console.log(weight_ip_params);
+var weight_op_params = $('.Weight-select-op').find(":selected").val();
+console.log(weight_op_params);
+$('.Weight-select-ip').click(function(){
+  
+   weight_ip_params = $('.Weight-select-ip').find(":selected").val();
+  console.log(weight_ip_params);
+})
+$('.Weight-select-op').click(function(){
+  
+   weight_op_params = $('.Weight-select-op').find(":selected").val();
+  console.log(weight_op_params);
+
+    
+  if(weight_ip_params == "carats"){
+  let c_value = $(".Weight-value-ip").val();
+  let w_result;
+  if(weight_op_params == "carats"){
+    w_result = c_value; 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "grams"){
+    w_result = kg2grams(carats2kg(c_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "kilograms"){
+    w_result = carats2kg(c_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "pounds"){
+    w_result = kg2pounds(carats2kg(c_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "Stone"){
+    w_result = kg2stones(carats2kg(c_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+}
+  
+  else if(weight_ip_params == "grams"){
+  let g_value = $(".Weight-value-ip").val();
+  let w_result;
+  if(weight_op_params == "carats"){
+    w_result =  kg2carats(grams2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "grams"){
+    w_result = g_value; 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "kilograms"){
+    w_result = grams2kg(g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "pounds"){
+    w_result = kg2pounds(grams2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "Stone"){
+    w_result = kg2stones(grams2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+}
+  
+  else if(weight_ip_params == "kilograms"){
+  let g_value = $(".Weight-value-ip").val();
+  let w_result;
+  if(weight_op_params == "carats"){
+    w_result =  kg2carats(g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "grams"){
+    w_result = kg2grams(g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "kilograms"){
+    w_result = (g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "pounds"){
+    w_result = kg2pounds(g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "Stone"){
+    w_result = kg2stones(g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+}
+
+
+else if(weight_ip_params == "pounds"){
+  let g_value = $(".Weight-value-ip").val();
+  let w_result;
+  if(weight_op_params == "carats"){
+    w_result =  kg2carats(pounds2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "grams"){
+    w_result = kg2grams(pounds2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "kilograms"){
+    w_result = pounds2kg(g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "pounds"){
+    w_result = (g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "Stone"){
+    w_result = kg2stones(pounds2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+}
+
+
+else if(weight_ip_params == "Stone"){
+  let g_value = $(".Weight-value-ip").val();
+  let w_result;
+  if(weight_op_params == "carats"){
+    w_result =  kg2carats(stones2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "grams"){
+    w_result = kg2grams(stones2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "kilograms"){
+    w_result = stones2kg(g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "pounds"){
+    w_result = kg2pounds(stones2kg(g_value)); 
+    $(".Weight-value-op").val(w_result);  
+  }
+  else if(weight_op_params == "Stone"){
+    w_result = (g_value); 
+    $(".Weight-value-op").val(w_result);  
+  }
+}
+
+
+
+
+
+    
+})
+
+$(".weight-clear").click(function(){
+  $('.Weight-value-ip').val("");
+  $('.Weight-value-op').val("");
+})
+$(".currency-clear").click(function(){
+  $('.currency-value-ip').val("");
+  $('.currency-value-op').val("");
+})
+$(".volume-clear").click(function(){
+  $('.volume-value-op').val("");
+  $('.volume-value-ip').val("");
+})
+
+
+let currency_array = [[1,0.0059,0.42,0.005,0.0036,0.32,0.071] , [169.74,1,71.73,0.88,0.61,54.40,12.38],[2.37,0.01,1,0.01,0.01,0.76,0.17],[193.01,1.14,81.56,1,0.69,61.86,14.08],[279.73,1.65,118.21,1.45,1,89.65,20.4],[3.12,0.02,1.32,0.02,0.01,1,0.23],[13.71,0.08,5.79,0.07,0.05,4.39,1]];
+
+let i=0,j=0;
+var currency_ip_params = $('.currency-select-ip').find(":selected").val();
+// console.log(currency_ip_params);
+var currency_op_params = $('.currency-select-op').find(":selected").val();
+// console.log(currency_op_params);
+
+function value_i(){
+  var arr_cid = ["peso","a-dollar","taka","c-dollar","euro","rupee","rand"];
+  for(i=0;i<arr_cid.length;i++){
+    if(currency_ip_params == arr_cid[i]){
+      break;
+    }
+  }
+  return i;
+}
+function value_j(){
+  var arr_cid = ["peso","a-dollar","taka","c-dollar","euro","rupee","rand"];
+  for(j=0;j<arr_cid.length;j++){
+    if(currency_op_params == arr_cid[j]){
+      break;
+    }
+  }
+  return j;
+}
+
+  i = value_i();
+  j = value_j();
+$('.currency-select-ip').click(function(){
+  
+  currency_ip_params = $('.currency-select-ip').find(":selected").val();
+  // console.log(currency_ip_params);
+  i = value_i();
+  j = value_j();
+})
+$('.currency-select-op').click(function(){
+  
+  currency_op_params = $('.currency-select-op').find(":selected").val();
+  // console.log(currency_op_params);
+  i = value_i();
+  j = value_j();
+
+let curr_ip = $(".currency-value-ip").val();
+let curr_op = curr_ip * currency_array[i][j];
+$(".currency-value-op").val(curr_op);
+
+})
+
+var volume_ip_params = $('.volume-select-ip').find(":selected").val();
+console.log(volume_ip_params);
+var volume_op_params = $('.volume-select-op').find(":selected").val();
+console.log(volume_op_params);
+
+const volume_map = {
+    
+    mls: 0.01,
+    lts : 1,
+    c_cm : 0.001,
+    c_mt : 1000,
+    c_inch : 0.016387,
+    c_ft : 28.31685,
+    c_yd : 764.5549,
+    t_sp : 0.004919,
+    table_sp :0.014758,
+    gll : 4.54609
+  };
+
+$('.volume-select-ip').click(function(){
+  
+  volume_ip_params = $('.volume-select-ip').find(":selected").val();
+  // console.log(volume_ip_params);
+})
+$('.volume-select-op').click(function(){
+  
+  volume_op_params = $('.volume-select-op').find(":selected").val();
+  // console.log(volume_op_params);
+
+let vol_ip = $(".volume-value-ip").val();
+let vol_op = vol_ip * volume_map[volume_ip_params] / volume_map[volume_op_params];
+$(".volume-value-op").val(vol_op);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
+
